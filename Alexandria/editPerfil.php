@@ -28,29 +28,6 @@ if(!empty($_GET['id']))
     }
 }
 
-//upload de foto
-
-// if(isset($_POST["update"])){
-//     $foto_perfil = $_FILES['path_perfil'];
-
-//     if($foto_perfil['error']){
-//         die("ERROR!");
-//     }
-
-//     $pasta = "perfil/";
-//     $nomeDoArquivo = $foto_perfil['name'];
-//     $novoNomeDoArquivo = uniqid();
-//     $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
-
-//     if($extensao != 'jpg' && $extensao != 'png'){
-//         die("Tipo de arquivo não aceito!");
-//     }
-
-//     $deu_certo = move_uploaded_file($foto_perfil['tmp_name'], $pasta . $novoNomeDoArquivo . "." . $extensao);
-
-//     $path_perfil = "perfil/$novoNomeDoArquivo.$extensao";
-// }
-
 
 ?>
 
