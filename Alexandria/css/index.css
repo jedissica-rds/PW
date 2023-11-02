@@ -1,0 +1,449 @@
+
+
+.container{
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    width: 100%;
+    padding: 60px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease 0s;
+}
+
+.logo{
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: lighter;
+}
+
+header.rolagem{
+    background-color: #856DDA;
+    padding: 20px 4%;
+    box-shadow: 2px 2px 15px #616161;
+}
+
+
+header.rolagem ul{
+        margin-top: 3%;
+}
+
+header.rolagem button{
+    margin-top: 1%;
+}
+
+header.rolagem .logo{
+    margin-top: 1%;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header nav{
+    margin-left: -100px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0px 40px;
+}
+
+header nav ul li a{
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+    padding: 0 20px;
+    color: rgb(255, 255, 255);
+}
+
+.banner{
+    height: 100vh;
+    background-image: url(/Alexandria//images/alex_ver8.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .button{
+        padding: 6px 20px;
+        margin-right: 15px;
+        margin-top: -300px;
+        background-color: rgb(255, 255, 255);
+        color: #856DDA;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+
+    /*Projeto Alexandria*/
+
+    .sobre_projeto {
+      display: grid;
+      column-gap: 50px;
+      grid-template-columns: auto auto;
+      width: 90%;
+      margin: auto;
+      margin-top: -30px;
+
+  }
+
+
+  .sobre_projeto .img_sobre_projeto{
+      width: 70%;
+      align-items: center;
+      margin-left: 20%;
+      margin-top: 18%;
+  }
+
+
+  .sobre_projeto #sobre_projeto-texto{
+      padding: 15px 15px;
+  }
+
+
+   #sobre_projeto-titulo{
+      font-family: "Cabin", sans-serif;
+      font-size: 32px;
+      text-align: center;
+      padding-top: 15px;
+     
+  }
+  #sobre_projeto-tituloroxo{
+      color: #856DDA;
+      font-family: "Cabin", sans-serif;
+      font-size: 32px;
+  }
+
+
+  .sobre_projeto #sobre_projeto-texto #sobre_projeto-descricao {
+        width: 85%;
+      text-align: justify;
+      font-family: "Cabin", sans-serif;
+      letter-spacing: 0.2px;
+      font-weight: 200px;
+  }
+
+    /*Acervo*/
+
+    .acervo{
+      padding-top: 0%;
+      display: grid;
+      column-gap: 20px;
+      grid-template-columns: auto auto;
+      width: 80%;
+      margin: auto auto;
+      }
+      
+      
+      .acervo .img_acervo{
+      width: 92%;
+      align-items: center;
+      margin-left: 3%;
+      margin-top: 8%;
+      }
+      
+      
+      .acervo #divulgacao-texto{
+      padding: 15px 5px;
+      margin-left: 5%;
+      }
+      
+      
+      .acervo #divulgacao-texto #divulgacao-titulo{
+      padding: 20px 0px;
+      font-family: "Josefin Sans", sans-serif;
+      color: #856DDA;
+      font-weight: lighter;
+      }
+      
+      
+      .acervo #divulgacao-texto #divulgacao-description{
+      width: 92%;
+      text-align: justify;
+      font-family: "Cabin", sans-serif;
+      letter-spacing: 0.2px;
+      font-weight: 200px;
+      }
+
+
+    /*Divulgação*/
+
+    .divulgacao{
+    padding-top: 0%;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: auto auto;
+    width: 80%;
+    margin: auto auto;
+    }
+    
+    
+    .divulgacao .img_divulgacao{
+    width: 100%;
+    align-items: center;
+    margin-left: 3%;
+    margin-top: 8%;
+    }
+    
+    
+    .divulgacao #divulgacao-texto{
+    padding: 15px 5px;
+    margin-left: 5%;
+    }
+    
+    
+    .divulgacao #divulgacao-texto #divulgacao-titulo{
+    padding: 20px 0px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #856DDA;
+    font-weight: lighter;
+    }
+    
+    
+    .divulgacao #divulgacao-texto #divulgacao-description{
+    width: 92%;
+    text-align: justify;
+    font-family: "Cabin", sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: 200px;
+    }
+
+    /*Eventos*/
+
+    .eventos{
+      padding-top: 3%;
+      display: grid;
+      column-gap: 50px;
+      grid-template-columns: auto auto;
+      width: 90%;
+      margin: auto auto;
+  }
+
+
+  .eventos .img_eventos{
+      width: 70%;
+      align-items: center;
+      margin-left: 20%;
+  }
+
+
+  .eventos #eventos-texto{
+      padding: 15px 15px;
+  }
+
+
+  .eventos #eventos-texto #eventos-titulo{
+      padding: 20px 0px;
+      font-family: "Josefin Sans", sans-serif;
+      color: #856DDA;
+      font-weight: lighter;
+  }
+
+
+  .eventos #eventos-texto #eventos-description{
+      width: 85%;
+      text-align: justify;
+      font-family: "Cabin", sans-serif;
+      letter-spacing: 0.2px;
+      font-weight: 200px;
+  }
+
+
+  .botao-saiba-mais{
+      padding: 6px 20px;
+      margin-right: 15px;
+      margin-top: 20px;
+      font-family: "Cabin", sans-serif;
+      background-color: #856DDA;
+      color: #ffffff;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+  }
+
+
+
+
+
+
+    /*footer*/
+
+.site-footer
+{
+  background-color:#856DDA;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color: white;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px;
+  font-family: "Inter",sans-serif;
+}
+
+.site-footer a
+{
+  color:white;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color: white;
+  text-decoration: none;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color: white;
+}
+.copyright-text
+{
+  margin:0;
+  font-size: 13px;
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center;
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#96a2b2;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#543b98
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#543b98
+}
+.social-icons a.twitter:hover
+{
+  background-color:#543b98
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#543b98
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#543b98
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
