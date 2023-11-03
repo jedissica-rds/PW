@@ -168,10 +168,10 @@ $check = mysqli_num_rows($result);
                   <p>publicados</p>
                 </div>
 
-                <div id="favoritados" class="qnt">
+                <!-- <div id="favoritados" class="qnt">
                   <h4>48</h4>
                   <p>favoritados</p>
-                </div>
+                </div> -->
 
                 <div id="lista de desejos" class="qnt">
                   <h4>78</h4>

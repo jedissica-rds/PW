@@ -158,25 +158,32 @@ header nav ul li a{
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     font-family: "Cabin", sans-serif;
-    margin-left: 10%;
+    width: fit-content;
+    margin: auto auto;
+    /* margin-left: 10%; */
   }
 
 
   #livros_flex{
     display: grid;
-    grid-template-columns: auto auto auto;
-    margin-left: 20px;
+    grid-template-columns: auto auto;
+    width: fit-content;
+    column-gap: 60px;
+    /* margin-left: 20px; */
+    padding-left: 20px;
+    margin: auto auto;
   }
 
   #livro_qnt{
     text-align: center;
     color: #856DDA;
+    margin-top: 30px;
   }
 
   .qnt{
-    padding-top: 20px;
+    padding-top: 15px;
   }
 
   #nome{
@@ -184,14 +191,18 @@ header nav ul li a{
   }
 
   #lado_perfil{
-    margin: 15% 15%;
-    padding-right: 70px;
+    margin-left: 60%;
+    padding-right: 170px;
+    margin: auto auto;
+    width: fit-content;
     border-right: 1px solid #bebdbd;
     height: auto;
   }
 
   #lado_livros{
-    margin: 12% 12%;
+    /* margin: 15% 20%; */
+    /* margin-left: -40%; */
+    padding-left: 170px;
   }
 
   #btn_editar{
@@ -230,6 +241,16 @@ header nav ul li a{
     cursor: pointer;
 
   }
+
+  .card-title{
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+}
+
+.card-text{
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+}
    /*footer*/
 
    .site-footer
