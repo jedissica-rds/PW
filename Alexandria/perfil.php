@@ -67,6 +67,7 @@ $check = mysqli_num_rows($result);
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <title>Alexandria: Acervo Literário</title>
 
   <style>
@@ -121,16 +122,19 @@ $check = mysqli_num_rows($result);
     <div class="btn-bottom">
       <div class="btn-box">
         <button id="btn-sobre" onclick="openSobre()">
-          SOBRE
+        <i class="fa-regular fa-user" style="color: #856dda;"></i>
+           Sobre
         </button>
-        <button id="btn-estante" onclick="openEstante()">
+        <!-- <button id="btn-estante" onclick="openEstante()">
           MEUS EVENTOS
-        </button>
+        </button> -->
         <button id="btn-livros" onclick="openLivros()">
-          MEUS LIVROS
+        <i class="fa-regular fa-pen-to-square" style="color: #856dda;"></i>
+           Meus Livros
         </button>
         <button id="btn-favoritos" onclick="openFavoritos()">
-          FAVORITOS
+        <i class="fa-regular fa-heart" style="color: #856dda;"></i>
+           Favoritos
         </button>
       </div>
     </div>
@@ -160,7 +164,7 @@ $check = mysqli_num_rows($result);
 
               <div id="livros_flex">
                 <div id="publicados" class="qnt">
-                  <h4>28</h4>
+                  <h4><?php echo $check; ?></h4>
                   <p>publicados</p>
                 </div>
 
@@ -270,60 +274,60 @@ $check = mysqli_num_rows($result);
 
   <script>
     var conteudo_sobre = document.getElementById("content-sobre");
-    var conteudo_estante = document.getElementById("content-estante");
+    // var conteudo_estante = document.getElementById("content-estante");
     var conteudo_livros = document.getElementById("content-livros");
     var conteudo_favoritos = document.getElementById("content-favoritos");
 
     var btn_sobre = document.getElementById("btn-sobre");
-    var btn_estante = document.getElementById("btn-estante");
+    // var btn_estante = document.getElementById("btn-estante");
     var btn_livros = document.getElementById("btn-livros");
     var btn_favoritos = document.getElementById("btn-favoritos");
 
     function openSobre() {
       conteudo_sobre.style.transform = "translateX(0)";
-      conteudo_estante.style.transform = "translateX(100%)";
+      // conteudo_estante.style.transform = "translateX(100%)";
       conteudo_livros.style.transform = "translateX(100%)";
       conteudo_favoritos.style.transform = "translateX(100%)";
 
       btn_sobre.style.color = "#856DDA"
-      btn_estante.style.color = "#272727"
+      // btn_estante.style.color = "#272727"
       btn_livros.style.color = "#272727"
       btn_favoritos.style.color = "#272727"
     }
 
-    function openEstante() {
-      conteudo_sobre.style.transform = "translateX(100%)";
-      conteudo_estante.style.transform = "translateX(0)";
-      conteudo_livros.style.transform = "translateX(100%)";
-      conteudo_favoritos.style.transform = "translateX(100%)";
+    // function openEstante() {
+    //   conteudo_sobre.style.transform = "translateX(100%)";
+    //   conteudo_estante.style.transform = "translateX(0)";
+    //   conteudo_livros.style.transform = "translateX(100%)";
+    //   conteudo_favoritos.style.transform = "translateX(100%)";
 
-      btn_sobre.style.color = "#272727"
-      btn_estante.style.color = "#856DDA"
-      btn_livros.style.color = "#272727"
-      btn_favoritos.style.color = "#272727"
-    }
+    //   btn_sobre.style.color = "#272727"
+    //   btn_estante.style.color = "#856DDA"
+    //   btn_livros.style.color = "#272727"
+    //   btn_favoritos.style.color = "#272727"
+    // }
 
 
     function openLivros() {
       conteudo_sobre.style.transform = "translateX(100%)";
-      conteudo_estante.style.transform = "translateX(100%)";
+      // conteudo_estante.style.transform = "translateX(100%)";
       conteudo_livros.style.transform = "translateX(0)";
       conteudo_favoritos.style.transform = "translateX(100%)";
 
       btn_sobre.style.color = "#272727"
-      btn_estante.style.color = "#272727"
+      // btn_estante.style.color = "#272727"
       btn_livros.style.color = "#856DDA"
       btn_favoritos.style.color = "#272727"
     }
 
     function openFavoritos() {
       conteudo_sobre.style.transform = "translateX(100%)";
-      conteudo_estante.style.transform = "translateX(100%)";
+      // conteudo_estante.style.transform = "translateX(100%)";
       conteudo_livros.style.transform = "translateX(100%)";
       conteudo_favoritos.style.transform = "translateX(0)";
 
       btn_sobre.style.color = "#272727"
-      btn_estante.style.color = "#272727"
+      // btn_estante.style.color = "#272727"
       btn_livros.style.color = "#272727"
       btn_favoritos.style.color = "#856DDA"
     }

@@ -111,6 +111,7 @@ header nav ul li a{
     display: flex;
     flex-direction: row;
     margin: auto auto;
+    padding-left: 40px;
     width: fit-content;
 }
 
@@ -124,11 +125,13 @@ header nav ul li a{
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
-    margin-right: 50px;
+    padding: 16px 0px;
+    /* margin-right: 50px; */
+    padding: 30px;
     font-size: 20px;
     color: #1e1e1f;
-    font-family: "Cabin", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
 }
 
 .conteudo{
@@ -147,7 +150,7 @@ header nav ul li a{
     transform: translateX(0px);
 }
 
-.hero .btn-bottom .btn-box.btn-sobre{
+.hero .btn-bottom .btn-box #btn-sobre{
     color: #856DDA;
 }
 
@@ -214,7 +217,7 @@ header nav ul li a{
   #btn_divulgacao{
     position: absolute;
     left: 90%;
-    top: 95%;
+    top: 90%;
     font-family: "Poppins", sans-serif;
     font-size: 30px;
     width: 45px;

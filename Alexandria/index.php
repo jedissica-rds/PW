@@ -8,16 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Josefin+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Inter&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <title>Alexandria</title>
+    <title>Alexandria: Acervo Nacional</title>
 </head>
 <body>
     <header class="header">
@@ -139,12 +138,12 @@
 
 
               <div id="eventos-texto">
-                  <h2 id="eventos-titulo">EVENTOS</h2>
+                  <h2 id="eventos-titulo">DIVULGAÇÃO</h2>
                   <p id="eventos-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra 
                     dolor at quam efficitur imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac ex ut eros dapibus bibendum.
                      Proin rutrum vel erat nec fermentum. Nam erat justo, aliquam vitae orci ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac ex ut eros dapibus bibendum.
                      Proin rutrum vel erat nec fermentum. Nam erat justo, aliquam vitae orci ac.</p>
-                  <a class="saiba-mais-text" href="#"><button class="botao-saiba-mais" type="submit">saiba mais</button></a>
+                  <a class="saiba-mais-text" href="divulgacao.php"><button class="botao-saiba-mais" type="submit">saiba mais</button></a>
 
 
      </div>
@@ -153,15 +152,13 @@
 
     
 <br>
-<br>
-<hr>
 
 <!--Divulgação-->
-<section>
-    <div class="divulgacao">
+<!-- <section>
+    <div class="divulgacao"> -->
             <!--texto-->
 
-            <div id="divulgacao-texto">
+            <!-- <div id="divulgacao-texto">
                 <h2 id="divulgacao-titulo">DIVULGAÇÃO</h2>
                 <p id="divulgacao-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra 
                   dolor at quam efficitur imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac ex ut eros dapibus bibendum.
@@ -175,7 +172,7 @@
                 <img class="img_divulgacao" src="images/img-divulgacao_ver2.png">
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <br> <br> <br> <br>
