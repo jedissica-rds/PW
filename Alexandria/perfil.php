@@ -130,11 +130,11 @@ $check = mysqli_num_rows($result);
         </button> -->
         <button id="btn-livros" onclick="openLivros()">
         <i class="fa-regular fa-pen-to-square" style="color: #856dda;"></i>
-          MEUS LIVROS
+          Meus Livros
         </button>
         <button id="btn-favoritos" onclick="openFavoritos()">
         <i class="fa-regular fa-heart" style="color: #856dda;"></i>
-          FAVORITOS
+          Favoritos
         </button>
       </div>
     </div>
