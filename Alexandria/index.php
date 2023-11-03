@@ -31,7 +31,7 @@
                     <ul class="nav__links">
                         <li>
                             <a href="index.php">HOME</a>
-                            <a href="#">DIVULGAÇÃO</a>
+                            <a href="divulgacao.php">DIVULGAÇÃO</a>
                             <a href="#">ACERVOS</a>
                         </li>
                     </ul>

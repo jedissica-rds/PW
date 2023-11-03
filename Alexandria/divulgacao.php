@@ -33,7 +33,7 @@
             <ul class="nav__links">
                 <li>
                     <a href="index.php">HOME</a>
-                    <a href="#">DIVULGAÇÃO</a>
+                    <a href="divulgacao.php">DIVULGAÇÃO</a>
                     <a href="#">ACERVOS</a>
                 </li>
             </ul>
@@ -57,15 +57,16 @@
                 {
                     while($row = mysqli_fetch_array($result))
                     {
-                        echo "<button id='btn_divulgacao_opener' style=' width: fit-content; background-color: transparent; border: 0px;'>
-                                 <div style='width: 190px; height: 290px;' class='card text-center'>
-                                     <img style='height: 160px; width: fit-content; margin-top: 15px; box-shadow: 2px 3px 3px #979797;' src='$row[capa]' class='card-img-top mx-auto' alt=''...'>
-                                        <div class='card-body'>
-                                            <h5 class='card-title' style='font-family: 'Poppins', sans-serif; font-size: 14px;'>$row[titulo]</h5>
-                                            <p class='card-text' style='font-family: 'Poppins', sans-serif; font-size: 5px;'>$row[autor]</p>
-                                        </div>
-                                 </div>
-                                </button>";
+                        echo 
+                        "<button id='btn_divulgacao_opener' style=' width: fit-content; background-color: transparent; border: 0px;'>
+                            <div style='width: 190px; height: 280px;' class='card text-center'>
+                                <img style='height: 160px; width: fit-content; margin-top: 15px; box-shadow: 2px 3px 3px #979797;' src='$row[capa]' class='card-img-top mx-auto' alt=''...'>
+                                    <div class='card-body'>
+                                        <h5 class='card-title' style='font-family: 'Poppins', sans-serif; font-size: 14px;'>$row[titulo]</h5>
+                                        <p class='card-text' style='font-family: 'Poppins', sans-serif; font-size: 5px;'>$row[autor]</p>
+                                    </div>
+                            </div>
+                        </button>";
 
                     }
                 }

@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/cadastro.css">
+  <link rel="stylesheet" href="css/cadastro.css?v=<?php echo time(); ?>">
   <link
     href="https://fonts.googleapis.com/css2?family=Arimo&family=Inter&family=Montserrat:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">

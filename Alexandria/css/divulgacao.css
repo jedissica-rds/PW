@@ -19,6 +19,7 @@ header{
     background-color: #856DDA;
     padding: 20px 4%;
     box-shadow: 2px 2px 15px #616161;
+    z-index: 10;
 }
 
 .logo{
@@ -73,11 +74,18 @@ header nav ul li a{
 
 #parent{
     margin-top: 5%;
+    width: fit-content;
 }
 
 #display{
 display: grid;
 grid-template-columns: auto auto auto auto;
+column-gap: 50px;
+width: fit-content;
+}
+
+#btn_divulgacao_opener{
+    width: fit-content;
 }
 
 .card-title{
