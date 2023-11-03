@@ -41,7 +41,7 @@
 
         <div class="btn-entrar">
             
-            <a href="#" class="cta">
+            <a href="login.php" class="cta">
                 <button class="button" id="btn_entrar">Entrar</button>
             </a>
         </div>
