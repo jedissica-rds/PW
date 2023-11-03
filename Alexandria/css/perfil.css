@@ -90,14 +90,15 @@ header nav ul li a{
     height: 120px;
     margin-top: 70%;
     box-shadow: 2px 2px 7px #272727;
-    border-width: 2px ;
+    border-width: 1px ;
     border-style: solid;
     border-color: #ffffff;
 }
 
 #nome_perfil{
     font-family: 'Cabin', sans-serif;
-    letter-spacing: 1px;
+    text-align: center;
+    letter-spacing: 1.3px;
     color: #ffffff;
     text-shadow: 3px 2px 7px #272727;
     text-align: center;
@@ -124,9 +125,10 @@ header nav ul li a{
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 20px 20px;
     margin-right: 50px;
-    font-size: 20px;
+    align-items: center;
+    font-size: 18px;
     color: #1e1e1f;
     font-family: "Cabin", sans-serif;
 }
@@ -157,7 +159,7 @@ header nav ul li a{
     display: grid;
     grid-template-columns: auto auto auto;
     font-family: "Cabin", sans-serif;
-    margin-left: 15%;
+    margin-left: 10%;
   }
 
 
@@ -184,6 +186,7 @@ header nav ul li a{
     margin: 15% 15%;
     padding-right: 70px;
     border-right: 1px solid #bebdbd;
+    height: auto;
   }
 
   #lado_livros{
