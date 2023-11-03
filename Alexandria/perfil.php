@@ -111,7 +111,7 @@
           SOBRE
         </button>
           <button id="btn-estante" onclick="openEstante()">
-            MINHA ESTANTE
+            MEUS EVENTOS
           </button>
           <button id="btn-livros" onclick="openLivros()">
           MEUS LIVROS
@@ -164,7 +164,7 @@
       </div>
       <div id="content-estante" class="conteudo">
         <div class="conteudo-minha-estante">
-          <h1>MINHA ESTANTE</h1>
+          <h1>MEUS EVENTOS</h1>
         </div>
       </div>
       <div id="content-livros" class="conteudo">
