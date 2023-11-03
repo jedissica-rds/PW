@@ -200,6 +200,32 @@ header nav ul li a{
     text-align: center; 
   }
 
+  /*MEUS LIVROS CONTEUDO */
+
+  #parent{
+    text-align: center;
+  }
+
+  #display{
+    width: fit-content;
+    margin: auto auto;
+  }
+
+  #btn_divulgacao{
+    position: absolute;
+    left: 90%;
+    top: 95%;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #856DDA;
+    color: #fff;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+
+  }
    /*footer*/
 
    .site-footer
