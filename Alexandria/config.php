@@ -12,6 +12,6 @@
     }
     else
     {
-        echo "Connection OK";
+        // echo "Connection OK";
     }
 ?>

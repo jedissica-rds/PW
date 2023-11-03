@@ -83,7 +83,7 @@ header nav ul li a{
 
 
 .cadastro .img_cadastro{
-    width: 80%;
+    width: 60%;
     align-items: center;
     margin-left: 10%;
 }
@@ -91,7 +91,8 @@ header nav ul li a{
 
 .cadastro #cadastro-texto{
     padding: 15px 15px;
-    margin: auto auto;
+    /* margin: auto auto; */
+    margin-top: 200px;
 }
 
 
