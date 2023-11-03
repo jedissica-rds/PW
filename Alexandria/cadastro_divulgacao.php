@@ -146,7 +146,7 @@ else
 </body>
 <script type="text/javascript">
   document.getElementById("btn_entrar").onclick = function () {
-    location.href = "cadastro.php";
+    location.href = "login.php";
   };
 </script>
 <script type="text/javascript">
