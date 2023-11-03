@@ -35,7 +35,7 @@ if ($capa == null) {
 }
 
 if ($bio == null) {
-  $bio = "pressure on people, people on streets";
+  $bio = "Olá";
 }
 
 include_once('config.php');
@@ -92,8 +92,8 @@ $check = mysqli_num_rows($result);
           <ul class="nav__links">
             <li>
               <a href="index.php">HOME</a>
+              <a href="#">ACERVO PÚBLICO</a>
               <a href="divulgacao.php">DIVULGAÇÃO</a>
-              <a href="#">ACERVOS</a>
             </li>
           </ul>
         </nav>
@@ -130,11 +130,11 @@ $check = mysqli_num_rows($result);
         </button> -->
         <button id="btn-livros" onclick="openLivros()">
         <i class="fa-regular fa-pen-to-square" style="color: #856dda;"></i>
-           Meus Livros
+          MEUS LIVROS
         </button>
         <button id="btn-favoritos" onclick="openFavoritos()">
         <i class="fa-regular fa-heart" style="color: #856dda;"></i>
-           Favoritos
+          FAVORITOS
         </button>
       </div>
     </div>
@@ -232,9 +232,9 @@ $check = mysqli_num_rows($result);
         <div class="col-xs-6 col-md-3">
           <h5>Menu</h5>
           <ul class="footer-links">
-            <li><a href="#">Acervo</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Acervo público</a></li>
             <li><a href="#">Divulgação</a></li>
-            <li><a href="#">Eventos</a></li>
           </ul>
         </div>
 
