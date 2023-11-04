@@ -3,7 +3,6 @@ session_start();
 include_once('config.php');
 
 $id = $_GET['id'];
-
 $sqlSelect = "SELECT * from usuarios WHERE id=$id";
 
 $result = $conexao->query($sqlSelect);
@@ -19,6 +18,8 @@ if ($result->num_rows > 0) {
     $capa = $row["path_capa"];
   }
 }
+
+$foto = $_SESSION['path_perfil'];
 
 if ((!isset($_SESSION['email']) == true) && (!isset($_SESSION['senha']) == true)) {
   unset($_SESSION['email']);
@@ -38,14 +39,22 @@ if ($bio == null) {
   $bio = "Olá";
 }
 
-include_once('config.php');
-
 $sqlDivulgacao = "SELECT * FROM livro_divulgacao WHERE ID_user = '$id'";
-$result = mysqli_query($conexao, $sqlDivulgacao);
+$resultado = mysqli_query($conexao, $sqlDivulgacao);
 
 $check = mysqli_num_rows($result);
 
+// ABA FAVORITOS (DIVULGACAO)
 
+$sqlFavoritos = 
+"SELECT ID, titulo, autor, ID_user, capa, ID_user, link, sinopse, capa_cor
+FROM favoritos_d Fav
+Inner Join livro_divulgacao Livro_d On Livro_d.ID = Fav.livro_ID And Fav.user_ID = 34; -- Condição (850 é só um Id de exemplo)";
+
+$r = $conexao->query($sqlFavoritos);
+$verificacao = mysqli_num_rows($result);
+
+// ABA FAVORITOS (ACERVO)
 ?>
 
 <!DOCTYPE html>
@@ -56,18 +65,13 @@ $check = mysqli_num_rows($result);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Josefin+Sans:wght@400;500&display=swap"
-    rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Josefin+Sans:wght@400;500&display=swap"rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/perfil.css?v=<?php echo time(); ?>">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Arimo&family=Inter&family=Montserrat:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Inter&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <title>Alexandria: Acervo Literário</title>
 
   <style>
@@ -84,29 +88,9 @@ $check = mysqli_num_rows($result);
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="flex">
-        <h2 class="logo">ALEXANDRIA</h2>
-        <nav>
-          <ul class="nav__links">
-            <li>
-              <a href="index.php">HOME</a>
-              <a href="#">ACERVO PÚBLICO</a>
-              <a href="divulgacao.php">DIVULGAÇÃO</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="btn-entrar">
-          <a href="#" class="cta">
-            <button class="button" id="btn_entrar">Entrar</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
-
+<div id="placeholder">
+      
+</div>
   <div id="banner">
     <div id="profile">
       <div id="profile-picture">
@@ -118,7 +102,7 @@ $check = mysqli_num_rows($result);
       </div>
     </div>
   </div>
-  <div class="hero">
+  <div class="hero" id="hero">
     <div class="btn-bottom">
       <div class="btn-box">
         <button id="btn-sobre" onclick="openSobre()">
@@ -167,15 +151,9 @@ $check = mysqli_num_rows($result);
                   <h4><?php echo $check; ?></h4>
                   <p>publicados</p>
                 </div>
-
-                <!-- <div id="favoritados" class="qnt">
-                  <h4>48</h4>
-                  <p>favoritados</p>
-                </div> -->
-
                 <div id="lista de desejos" class="qnt">
-                  <h4>78</h4>
-                  <p>lista de desejos</p>
+                  <h4><?php echo $verificacao; ?></h4>
+                  <p>favoritos</p>
                 </div>
               </div>
             </div>
@@ -194,9 +172,11 @@ $check = mysqli_num_rows($result);
           <div class="row" id="display">
             <?php
             if ($check > 0) {
-              while ($row = mysqli_fetch_array($result)) {
+              while ($row = mysqli_fetch_array($resultado)) {
+                $id_livro = $row["ID"];
                 echo 
-                "<button id='btn_divulgacao_opener' style=' width: fit-content; background-color: transparent; border: 0px;'>
+                "<a href = 'livro_profile.php?id=$id_livro'>
+                <button id='btn_divulgacao_opener' style=' width: fit-content; background-color: transparent; border: 0px;'>
                     <div style='width: 190px; height: 290px;' class='card text-center'>
                         <img style='height: 160px; width: fit-content; margin-top: 15px; box-shadow: 2px 3px 3px #979797;' src='$row[capa]' class='card-img-top mx-auto' alt=''...'>
                     <div class='card-body'>
@@ -204,7 +184,8 @@ $check = mysqli_num_rows($result);
                         <p class='card-text' style='font-family: 'Poppins', sans-serif; font-size: 5px;'>$row[autor]</p>
                     </div>
                     </div>
-                  </button>";
+                  </button>
+                  </a>";
               }
             }
             ?>
@@ -215,7 +196,29 @@ $check = mysqli_num_rows($result);
     </div>
     <div id="content-favoritos" class="conteudo">
       <div class="conteudo-favoritos">
-        <h1>FAVORITOS</h1>
+      <div class="container py-5" id="pai">
+          <div class="row" id="exibicao">
+            <?php
+            if ($verificacao > 0) {
+              while ($row = mysqli_fetch_array($r)) {
+                $id_livro_fav = $row["ID"];
+                echo 
+                "<a href = 'livro_profile.php?id=$$id_livro_fav'>
+                <button id='btn_divulgacao_opener' style=' width: fit-content; background-color: transparent; border: 0px;'>
+                    <div style='width: 190px; height: 290px;' class='card text-center'>
+                        <img style='height: 160px; width: fit-content; margin-top: 15px; box-shadow: 2px 3px 3px #979797;' src='$row[capa]' class='card-img-top mx-auto' alt=''...'>
+                    <div class='card-body'>
+                        <h5 class='card-title' style='font-family: 'Poppins', sans-serif; font-size: 14px;'>$row[titulo]</h5>
+                        <p class='card-text' style='font-family: 'Poppins', sans-serif; font-size: 5px;'>$row[autor]</p>
+                    </div>
+                    </div>
+                  </button>
+                  </a>";
+              }
+            }
+            ?>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -273,61 +276,46 @@ $check = mysqli_num_rows($result);
   </footer>
 
   <script>
+    var hero = document.getElementById("hero");
+
     var conteudo_sobre = document.getElementById("content-sobre");
-    // var conteudo_estante = document.getElementById("content-estante");
     var conteudo_livros = document.getElementById("content-livros");
     var conteudo_favoritos = document.getElementById("content-favoritos");
 
     var btn_sobre = document.getElementById("btn-sobre");
-    // var btn_estante = document.getElementById("btn-estante");
     var btn_livros = document.getElementById("btn-livros");
     var btn_favoritos = document.getElementById("btn-favoritos");
 
     function openSobre() {
+      hero.style.height = conteudo_sobre.offsetHeight + 'px'; 
       conteudo_sobre.style.transform = "translateX(0)";
-      // conteudo_estante.style.transform = "translateX(100%)";
       conteudo_livros.style.transform = "translateX(100%)";
       conteudo_favoritos.style.transform = "translateX(100%)";
 
       btn_sobre.style.color = "#856DDA"
-      // btn_estante.style.color = "#272727"
       btn_livros.style.color = "#272727"
       btn_favoritos.style.color = "#272727"
     }
 
-    // function openEstante() {
-    //   conteudo_sobre.style.transform = "translateX(100%)";
-    //   conteudo_estante.style.transform = "translateX(0)";
-    //   conteudo_livros.style.transform = "translateX(100%)";
-    //   conteudo_favoritos.style.transform = "translateX(100%)";
-
-    //   btn_sobre.style.color = "#272727"
-    //   btn_estante.style.color = "#856DDA"
-    //   btn_livros.style.color = "#272727"
-    //   btn_favoritos.style.color = "#272727"
-    // }
-
 
     function openLivros() {
+      hero.style.height = conteudo_livros.offsetHeight + 'px'; 
       conteudo_sobre.style.transform = "translateX(100%)";
-      // conteudo_estante.style.transform = "translateX(100%)";
       conteudo_livros.style.transform = "translateX(0)";
       conteudo_favoritos.style.transform = "translateX(100%)";
 
       btn_sobre.style.color = "#272727"
-      // btn_estante.style.color = "#272727"
       btn_livros.style.color = "#856DDA"
       btn_favoritos.style.color = "#272727"
     }
 
     function openFavoritos() {
+      hero.style.height = conteudo_favoritos.offsetHeight + 'px';
       conteudo_sobre.style.transform = "translateX(100%)";
-      // conteudo_estante.style.transform = "translateX(100%)";
       conteudo_livros.style.transform = "translateX(100%)";
       conteudo_favoritos.style.transform = "translateX(0)";
 
       btn_sobre.style.color = "#272727"
-      // btn_estante.style.color = "#272727"
       btn_livros.style.color = "#272727"
       btn_favoritos.style.color = "#856DDA"
     }
@@ -336,6 +324,12 @@ $check = mysqli_num_rows($result);
       location.href = "cadastro_divulgacao.php?id=<?php echo $id ?>";
     }; 
   </script>
+
+<script>
+$(function(){
+  $("#placeholder").load("navigation.php");
+});
+</script>
 </body>
 
 </html>

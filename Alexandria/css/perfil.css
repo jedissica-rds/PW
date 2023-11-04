@@ -136,6 +136,7 @@ header nav ul li a{
 
 .conteudo{
     width: 100%;
+    height: fit-content;
     transform: translateX(100%);
     position: absolute;
 }
@@ -143,7 +144,7 @@ header nav ul li a{
 .hero{
     position: relative;
     overflow: hidden;
-    height: 500px;
+    height: 300px;
 }
 
 #content-sobre{
@@ -156,12 +157,17 @@ header nav ul li a{
 
 /*SOBRE CONTEUDO */
 
+#content-sobre{
+  height: 300px!important;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;
     font-family: "Cabin", sans-serif;
     width: fit-content;
     margin: auto auto;
+    height: fit-content;
     /* margin-left: 10%; */
   }
 
@@ -217,19 +223,24 @@ header nav ul li a{
 
   /*MEUS LIVROS CONTEUDO */
 
+  #content-livros{
+    height: fit-content;
+  }
+
   #parent{
     text-align: center;
   }
-
+ 
   #display{
     width: fit-content;
     margin: auto auto;
+    padding-bottom: 60px;
   }
 
   #btn_divulgacao{
     position: absolute;
     left: 90%;
-    top: 90%;
+    top: 70%;
     font-family: "Poppins", sans-serif;
     font-size: 30px;
     width: 45px;
@@ -251,6 +262,27 @@ header nav ul li a{
     font-size: 13px;
     font-family: "Poppins", sans-serif;
 }
+
+/*FAVORITOS CONTEUDOO*/
+
+#content-favoritos{
+  height: fit-content;
+}
+
+#conteudo_favoritos{
+  height: fit-content;
+}
+
+#pai{
+  text-align: center;
+}
+
+#exibicao{
+  width: fit-content;
+  margin: auto auto;
+  padding-bottom: 60px;
+}
+
    /*footer*/
 
    .site-footer

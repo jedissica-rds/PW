@@ -73,12 +73,12 @@ header nav ul li a{
 /* FORMULÁRIO */
 
 .login{
-    padding-top: 5%;
+    /* padding-top: 20px; */
     display: grid;
     column-gap: 30px;
     grid-template-columns: 50% 50%;
     width: 90%;
-    margin: 3% auto;
+    margin: 6% auto;
 }
 
 

@@ -1,4 +1,6 @@
-
+<?php 
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,38 +10,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.css?v=<?php echo time(); ?>">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Inter&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Alexandria: Acervo Literário</title>
 </head>
 <body>
-<header class="header">
 
-<div class="container">
-
-    <div class="flex">
-
-        <h2 class="logo">ALEXANDRIA</h2>
-        <nav>
-            <ul class="nav__links">
-                <li>
-                    <a href="index.php">HOME</a>
-                    <a href="divulgacao.php">DIVULGAÇÃO</a>
-                    <a href="#">ACERVOS</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="btn-entrar">
-            
-            <a href="login.php" class="cta">
-                <button class="button" id="btn_entrar">Entrar</button>
-            </a>
-        </div>
-    </div>
+<div id="placeholder">
+      
 </div>
-</header>
 
 <section>
       <div class="login">
@@ -120,6 +101,12 @@
 </footer>
 
 </body>
+
+<script>
+$(function(){
+  $("#placeholder").load("navigation.php");
+});
+</script>
 <script type="text/javascript">
     document.getElementById("btn_entrar").onclick = function () {
         location.href = "login.php";
