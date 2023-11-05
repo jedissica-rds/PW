@@ -3,6 +3,8 @@
     session_start();
     $id = $_SESSION['ID'];
 
+    if($id != null){
+    
     $sqlSelect = "SELECT path_perfil from usuarios WHERE id=$id";
 
     $result = $conexao->query($sqlSelect);
@@ -11,6 +13,7 @@
 
     while ($row = mysqli_fetch_assoc($result)) {
     $perfil = $row["path_perfil"];
+    }
     }
 }
 ?>

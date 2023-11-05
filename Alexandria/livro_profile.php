@@ -3,7 +3,7 @@
    include_once('config.php');
    
    $id_livro = $_GET['id'];
-   $sqlSelect = "SELECT * from livro_divulgacao WHERE ID=$id_livro";
+   $sqlSelect = "SELECT * from livro_divulgacao WHERE ID = '$id_livro'";
 
    $id = $_SESSION['ID'];
    
@@ -11,7 +11,7 @@
    
    if ($result->num_rows > 0) {
    
-     while ($row = mysqli_fetch_assoc($result)) {
+      $row = mysqli_fetch_assoc($result);
        $titulo = $row["titulo"];
        $autor = $row["autor"];
        $sinopse = $row["sinopse"];
@@ -20,20 +20,6 @@
        $capa = $row["capa"];
        $ID_use = $row["ID_user"];
      }
-   }
-
-   if (isset($_POST['submit'])) {
-    include_once('config.php');
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
-    $tipo = "COMUM";
-    $path_perfil = null;
-    $path_capa = null;
-    $bio = null;
-  
-    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, email, senha, tipo, path_perfil, path_capa, bio) VALUES ('$nome', '$email', '$senha', '$tipo', '$path_perfil', '$path_capa', '$bio')");
-   }
 
 ?>
 <!DOCTYPE html>
@@ -83,7 +69,7 @@
 
       <div id="btn_box">
         <button id="btn_comprar" class="button_livro">ONDE COMPRAR</button>
-        <button id="btn_favoritar" class="button_livro">FAVORITAR</button>
+        <button id="btn_favoritar" class="button_livro"><i class="fa-regular fa-heart" style="color: #856dda;"></i></button>
       </div>
     </section>
 

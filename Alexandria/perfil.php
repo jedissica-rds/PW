@@ -49,12 +49,11 @@ $check = mysqli_num_rows($result);
 $sqlFavoritos = 
 "SELECT ID, titulo, autor, ID_user, capa, ID_user, link, sinopse, capa_cor
 FROM favoritos_d Fav
-Inner Join livro_divulgacao Livro_d On Livro_d.ID = Fav.livro_ID And Fav.user_ID = 34; -- Condição (850 é só um Id de exemplo)";
+Inner Join livro_divulgacao Livro_d On Livro_d.ID = Fav.livro_ID And Fav.user_ID = $id;";
 
 $r = $conexao->query($sqlFavoritos);
-$verificacao = mysqli_num_rows($result);
+$verificacao = mysqli_num_rows($r);
 
-// ABA FAVORITOS (ACERVO)
 ?>
 
 <!DOCTYPE html>
@@ -203,7 +202,7 @@ $verificacao = mysqli_num_rows($result);
               while ($row = mysqli_fetch_array($r)) {
                 $id_livro_fav = $row["ID"];
                 echo 
-                "<a href = 'livro_profile.php?id=$$id_livro_fav'>
+                "<a href = 'livro_profile.php?id=$id_livro_fav'>
                 <button id='btn_divulgacao_opener' style=' width: fit-content; background-color: transparent; border: 0px;'>
                     <div style='width: 190px; height: 290px;' class='card text-center'>
                         <img style='height: 160px; width: fit-content; margin-top: 15px; box-shadow: 2px 3px 3px #979797;' src='$row[capa]' class='card-img-top mx-auto' alt=''...'>
