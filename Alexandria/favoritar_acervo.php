@@ -4,11 +4,11 @@ include_once('config.php');
 session_start();
 
 $id_livro = $_GET['id'];
+if (isset($_SESSION['ID'])) {
 
-// echo $id_livro;
-$id = $_SESSION['ID'];
+$id = $_SESSION['ID'];}
 $sqlFavoritos = 
-"SELECT ID FROM favoritos_d Fav Inner Join livro_divulgacao Livro_d On Livro_d.ID = Fav.livro_ID And Fav.user_ID = $id;";
+"SELECT ID FROM favoritos_a Fav Inner Join livro_acervo Livro_a On Livro_a.ID = Fav.ID_livro And Fav.ID_user = $id;";
 
 $resultado = $conexao->query($sqlFavoritos);
 
@@ -19,9 +19,9 @@ if ($check > 0){
     header("Location: perfil.php?id=$id");
 }
 else{
-    $sqlSelect = "INSERT INTO favoritos_d(user_ID,livro_ID) VALUES ('$id', '$id_livro')";
+    $sqlINSERT = "INSERT INTO favoritos_a(ID_user,ID_livro) VALUES ('$id', '$id_livro')";
 
-    $result = $conexao->query($sqlSelect);
+    $result = $conexao->query($sqlINSERT);
 
     header("Location: perfil.php?id=$id");
 }

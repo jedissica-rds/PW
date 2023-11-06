@@ -3,9 +3,12 @@
    include_once('config.php');
    
    $id_livro = $_GET['id'];
-   $sqlSelect = "SELECT * from livro_divulgacao WHERE ID = '$id_livro'";
+   $sqlSelect = "SELECT * from livro_acervo WHERE ID = '$id_livro'";
 
-   $id = $_SESSION['ID'];
+   if (isset($_SESSION['ID'])) {
+
+    $id = $_SESSION['ID'];}
+
    
    $result = $conexao->query($sqlSelect);
    
@@ -15,10 +18,9 @@
        $titulo = $row["titulo"];
        $autor = $row["autor"];
        $sinopse = $row["sinopse"];
-       $link = $row["link"];
+       $arquivo = $row["arquivo"];
        $capa_cor = $row["capa_cor"];
        $capa = $row["capa"];
-       $ID_use = $row["ID_user"];
      }
 
 ?>
@@ -68,7 +70,7 @@
       </div>
 
       <div id="btn_box">
-        <button id="btn_comprar" class="button_livro">ONDE COMPRAR</button>
+        <button id="btn_comprar" class="button_livro">BAIXAR</button>
         <button id="btn_favoritar" class="button_livro"><i class="fa-regular fa-heart" style="color: #856dda;"></i></button>
       </div>
     </section>
@@ -134,13 +136,13 @@ $(function(){
 
 <script>
   document.getElementById("btn_comprar").onclick = function () {
-      location.href = "<?php echo $link?>";
+      location.href = "downloadPDF.php?endereco_livro=<?php echo $arquivo?>id_livro=<?php echo $id_livro?>";
   }; 
 </script>
 
 <script>
   document.getElementById("btn_favoritar").onclick = function () {
-    location.href = "favoritar.php?id=<?php echo $id_livro?>";
+    location.href = "favoritar_acervo.php?id=<?php echo $id_livro?>";
   }; 
 </script>
 </body>

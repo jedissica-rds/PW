@@ -54,6 +54,16 @@ Inner Join livro_divulgacao Livro_d On Livro_d.ID = Fav.livro_ID And Fav.user_ID
 $r = $conexao->query($sqlFavoritos);
 $verificacao = mysqli_num_rows($r);
 
+$sqlFavoritosA = 
+"SELECT ID, titulo, autor, capa, arquivo, sinopse, capa_cor
+FROM favoritos_a Fav
+Inner Join livro_acervo Livro_a On Livro_a.ID = Fav.ID_livro And Fav.ID_user = $id;";
+
+$rA = $conexao->query($sqlFavoritosA);
+$verificacaoA = mysqli_num_rows($rA);
+
+$fav = $verificacaoA + $verificacao;
+
 ?>
 
 <!DOCTYPE html>
@@ -151,7 +161,7 @@ $verificacao = mysqli_num_rows($r);
                   <p>publicados</p>
                 </div>
                 <div id="lista de desejos" class="qnt">
-                  <h4><?php echo $verificacao; ?></h4>
+                  <h4><?php echo $fav; ?></h4>
                   <p>favoritos</p>
                 </div>
               </div>
@@ -198,11 +208,34 @@ $verificacao = mysqli_num_rows($r);
       <div class="container py-5" id="pai">
           <div class="row" id="exibicao">
             <?php
+
+            echo "<h3 id='titulo'><i class='fa-solid fa-bookmark' style='color: #856dda;'></i>  Livros Divulgados</h3>";
+
             if ($verificacao > 0) {
               while ($row = mysqli_fetch_array($r)) {
                 $id_livro_fav = $row["ID"];
                 echo 
                 "<a href = 'livro_profile.php?id=$id_livro_fav'>
+                <button id='btn_divulgacao_opener' style=' width: fit-content; background-color: transparent; border: 0px;'>
+                    <div style='width: 190px; height: 290px;' class='card text-center'>
+                        <img style='height: 160px; width: fit-content; margin-top: 15px; box-shadow: 2px 3px 3px #979797;' src='$row[capa]' class='card-img-top mx-auto' alt=''...'>
+                    <div class='card-body'>
+                        <h5 class='card-title' style='font-family: 'Poppins', sans-serif; font-size: 14px;'>$row[titulo]</h5>
+                        <p class='card-text' style='font-family: 'Poppins', sans-serif; font-size: 5px;'>$row[autor]</p>
+                    </div>
+                    </div>
+                  </button>
+                  </a>";
+              }
+            }
+            
+
+            echo "<h3 id='titulo'><i class='fa-regular fa-bookmark' style='color: #856dda;'></i>  Livros Divulgados</h3>";
+            if ($verificacaoA > 0) {
+              while ($row = mysqli_fetch_array($rA)) {
+                $id_livro_favA = $row["ID"];
+                echo 
+                "<a href = 'livro_perfil_acervo.php?id=$id_livro_favA'>
                 <button id='btn_divulgacao_opener' style=' width: fit-content; background-color: transparent; border: 0px;'>
                     <div style='width: 190px; height: 290px;' class='card text-center'>
                         <img style='height: 160px; width: fit-content; margin-top: 15px; box-shadow: 2px 3px 3px #979797;' src='$row[capa]' class='card-img-top mx-auto' alt=''...'>

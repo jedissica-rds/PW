@@ -26,7 +26,7 @@
                     <li>
                         <a href="index.php">HOME</a>
                         <a href="divulgacao.php">DIVULGAÇÃO</a>
-                        <a href="#">ACERVOS</a>
+                        <a href="acervo.php">ACERVO PÚBLICO</a>
                     </li>
                 </ul>
             </nav>

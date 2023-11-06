@@ -4,10 +4,9 @@
 
     if (isset($_SESSION['ID'])) {
 
-        $id = $_SESSION['ID'];}
-    
+    $id = $_SESSION['ID'];}
 
-    $sqlDivulgacao = "SELECT * FROM livro_divulgacao";
+    $sqlDivulgacao = "SELECT * FROM livro_acervo";
     $result = mysqli_query($conexao, $sqlDivulgacao);
 
     $check = mysqli_num_rows($result);
@@ -43,7 +42,7 @@
                     {
                         $id_livro = $row["ID"];
                         echo
-                        "<a href = 'livro_profile.php?id=$id_livro'>
+                        "<a href = 'livro_perfil_acervo.php?id=$id_livro'>
                         <button class='btn_divulgacao_opener' style=' width: fit-content; background-color: transparent; border: 0px;'>
                             <div style='width: 190px; height: 280px;' class='card text-center'>
                                 <img style='height: 160px; width: fit-content; margin-top: 15px; box-shadow: 2px 3px 3px #979797;' src='$row[capa]' class='card-img-top mx-auto' alt=''...'>

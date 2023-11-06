@@ -196,6 +196,12 @@ header nav ul li a{
     color: #856DDA;
   }
 
+  #titulo{
+    color: #856DDA;
+    padding: 16px;
+    text-align: left;
+  }
+
   #lado_perfil{
     margin-left: 60%;
     padding-right: 170px;
