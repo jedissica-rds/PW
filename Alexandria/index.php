@@ -79,9 +79,8 @@
                   amor pela literatura nacional no Brasil. Oferecemos acesso a uma vasta coleção
                   de livros clássicos da literatura brasileira, o acervo nacional inteiro em um só lugar. Você poderá criar
                   sua própria estante, adicionando livros aos "favoritos" e baixando-os para ler quando quiser.
-                  Além disso, apoiamos escritores independentes e divulgamos eventos literários emocionantes, onde tanto
-                  organizações podem divulgar seus eventos quanto os leitores podem acessá-los e obter informações de forma
-                  prática. </p>
+                  Além disso, ajudamos escritores independentes por meio da divulgação de informações de suas obras literárias dentro do
+                  website. </p>
               <br>
               <p id="sobre_projeto-descricao"> O hábito de leitura no Brasil está diminuindo, em grande parte
                   devido ao impacto das redes sociais e à agitação da vida moderna. Queremos reverter essa
@@ -106,10 +105,10 @@
 
           <div id="divulgacao-texto">
               <h2 id="divulgacao-titulo">ACERVO</h2>
-              <p id="divulgacao-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra 
-                dolor at quam efficitur imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac ex ut eros dapibus bibendum.
-                 Proin rutrum vel erat nec fermentum. Nam erat justo, aliquam vitae orci ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac ex ut eros dapibus bibendum.
-                 Proin rutrum vel erat nec fermentum. Nam erat justo, aliquam vitae orci ac.</p>
+              <p id="divulgacao-description"> No acervo literário do Alexandria você encontrará clássicos da literatura nacional
+              que possuem domínio público! Obras como 'Memórias Póstumas de Brás Cubas' e 'O Cortiço' estão disponíveis aqui, podendo adicioná-lsta
+              na sua estante pessoal e obter seu arquivo em formato pdf.
+              </p>
               <a class="saiba-mais-text" href="#"><button class="botao-saiba-mais" type="submit">saiba mais</button></a>
            </div>
 
@@ -137,10 +136,9 @@
 
               <div id="eventos-texto">
                   <h2 id="eventos-titulo">DIVULGAÇÃO</h2>
-                  <p id="eventos-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra 
-                    dolor at quam efficitur imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac ex ut eros dapibus bibendum.
-                     Proin rutrum vel erat nec fermentum. Nam erat justo, aliquam vitae orci ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac ex ut eros dapibus bibendum.
-                     Proin rutrum vel erat nec fermentum. Nam erat justo, aliquam vitae orci ac.</p>
+                  <p id="eventos-description">Alexandria apoia autores brasileiros independentes! Na área de divulgacão você pode encontrar
+                    informações sobre os mais diversos livros e onde comprá-los, sendo possível adicioná-los em sua lista de desejos. 
+                  </p>
                   <a class="saiba-mais-text" href="divulgacao.php"><button class="botao-saiba-mais" type="submit">saiba mais</button></a>
 
 
